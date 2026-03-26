@@ -1,0 +1,390 @@
+/* ============================================================
+   FULLGALLERY.CSS — In-Page Full Portfolio Gallery
+   Slides up over the main site. Same header/footer feel.
+   ============================================================ */
+
+/* ── Full page overlay (slides up from bottom) ── */
+#fullGalleryPage {
+  position: fixed;
+  inset: 0;
+  z-index: 1500;            /* above nav (1000), below lightbox (2000) */
+  background: var(--warm-white);
+  display: flex;
+  flex-direction: column;
+  transform: translateY(100%);
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  visibility: hidden;
+  overflow: hidden;
+}
+#fullGalleryPage.open {
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* ── Header ── */
+.fg-header {
+  flex-shrink: 0;
+  background: rgba(254, 252, 250, 0.97);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border-mid);
+  position: relative;
+  z-index: 5;
+}
+.fg-header-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Back button */
+.fg-back-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-mid);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.8rem 0.4rem 0.3rem;
+  border-radius: 100px;
+  transition: color 0.2s, background 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+.fg-back-btn svg {
+  width: 18px; height: 18px;
+  transition: transform 0.2s;
+}
+.fg-back-btn:hover {
+  color: var(--coral);
+  background: var(--coral-xpale);
+}
+.fg-back-btn:hover svg { transform: translateX(-3px); }
+
+/* Logo inside header */
+.fg-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.fg-logo-name {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+.fg-logo-sub {
+  font-size: 0.5rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--coral);
+}
+
+/* Book Now pill */
+.fg-book-btn {
+  padding: 0.45rem 1.1rem;
+  background: var(--coral);
+  color: white;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  font-family: var(--font-sans);
+  transition: background 0.2s, transform 0.2s;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.fg-book-btn:hover {
+  background: #d05c47;
+  transform: translateY(-1px);
+}
+
+/* ── Hero banner ── */
+.fg-hero {
+  flex-shrink: 0;
+  background: linear-gradient(135deg, var(--coral) 0%, #d05c47 100%);
+  padding: 3rem 1.5rem 2.8rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.fg-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.1) 0%, transparent 60%);
+  pointer-events: none;
+}
+.fg-hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  font-weight: 400;
+  color: white;
+  line-height: 1.15;
+  margin-bottom: 0.6rem;
+}
+.fg-hero-title em {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.85);
+}
+.fg-hero-sub {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 420px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ── Filter bar ── */
+.fg-filter-bar {
+  flex-shrink: 0;
+  background: white;
+  border-bottom: 1px solid var(--border-mid);
+  position: sticky;
+  top: 0;
+  z-index: 4;
+}
+.fg-filter-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.fg-filter-inner::-webkit-scrollbar { display: none; }
+
+.fg-filter-btn {
+  flex-shrink: 0;
+  padding: 0.4rem 1.1rem;
+  border: 1px solid var(--border-mid);
+  border-radius: 100px;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-mid);
+  cursor: pointer;
+  background: none;
+  transition: all 0.2s ease;
+  font-family: var(--font-sans);
+  min-height: 34px;
+  -webkit-tap-highlight-color: transparent;
+}
+.fg-filter-btn:hover,
+.fg-filter-btn.active {
+  border-color: var(--coral);
+  background: var(--coral);
+  color: white;
+}
+
+/* ── Scrollable body ── */
+.fg-body {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+/* ── Couple cards grid ── */
+.fg-grid {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* ── Individual couple card ── */
+.fg-couple-card {
+  cursor: pointer;
+  border-radius: 6px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 2px 16px rgba(44, 36, 32, 0.06);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.35s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.fg-couple-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(232, 112, 90, 0.18);
+}
+
+/* Card image area */
+.fg-card-img {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--coral-xpale);
+}
+.fg-card-img img,
+.fg-card-img-ph {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+}
+.fg-couple-card:hover .fg-card-img img,
+.fg-couple-card:hover .fg-card-img-ph {
+  transform: scale(1.07);
+}
+
+/* Hover overlay */
+.fg-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(44, 36, 32, 0.52);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.fg-couple-card:hover .fg-card-overlay { opacity: 1; }
+.fg-card-overlay svg {
+  width: 32px; height: 32px;
+}
+.fg-card-overlay span {
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: white;
+}
+
+/* Photo count badge */
+.fg-card-badge {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.65rem;
+  background: rgba(232, 112, 90, 0.92);
+  color: white;
+  font-size: 0.52rem;
+  letter-spacing: 0.1em;
+  padding: 0.22rem 0.55rem;
+  border-radius: 100px;
+  backdrop-filter: blur(4px);
+}
+
+/* Category tag */
+.fg-card-cat-tag {
+  position: absolute;
+  top: 0.65rem;
+  left: 0.65rem;
+  background: rgba(44, 36, 32, 0.6);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.5rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.22rem 0.55rem;
+  border-radius: 100px;
+  backdrop-filter: blur(4px);
+}
+
+/* Card text info */
+.fg-card-info {
+  padding: 1rem 1.1rem 1.2rem;
+}
+.fg-card-name {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--text-dark);
+  margin-bottom: 0.25rem;
+}
+.fg-card-meta {
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+
+/* ── CTA at bottom ── */
+.fg-cta {
+  text-align: center;
+  padding: 3rem 1.5rem 4rem;
+  border-top: 1px solid var(--border-mid);
+}
+.fg-cta-text {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-style: italic;
+  color: var(--text-mid);
+  margin-bottom: 1.5rem;
+}
+
+/* ── Footer strip ── */
+.fg-footer {
+  flex-shrink: 0;
+  background: var(--text-dark);
+  color: rgba(247, 243, 239, 0.45);
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  flex-wrap: wrap;
+}
+.fg-footer a {
+  color: rgba(247, 243, 239, 0.65);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.fg-footer a:hover { color: var(--coral-light); }
+
+/* ══════════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .fg-grid { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
+}
+
+@media (max-width: 768px) {
+  .fg-header-inner { height: 52px; padding: 0 1rem; }
+  .fg-logo { display: none; }       /* hide centered logo on mobile — too crowded */
+  .fg-back-btn span { display: none; } /* show only the arrow icon */
+  .fg-back-btn { padding: 0.4rem; }
+
+  .fg-hero { padding: 2rem 1.2rem 1.8rem; }
+  .fg-hero-title { font-size: 1.7rem; }
+
+  .fg-filter-inner { padding: 0.6rem 1rem; }
+
+  .fg-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    padding: 1.5rem 1rem 1.5rem;
+  }
+
+  .fg-card-info { padding: 0.75rem 0.85rem 0.9rem; }
+  .fg-card-name { font-size: 0.95rem; }
+
+  /* Always show overlay hint on mobile */
+  .fg-card-overlay { opacity: 0; background: rgba(44,36,32,0.45); }
+  .fg-couple-card:active .fg-card-overlay { opacity: 1; }
+
+  .fg-cta { padding: 2rem 1.2rem 2.5rem; }
+  .fg-cta-text { font-size: 1.1rem; }
+}
+
+@media (max-width: 380px) {
+  .fg-grid { grid-template-columns: 1fr; }
+}

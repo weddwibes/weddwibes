@@ -1,0 +1,258 @@
+/* ============================================================
+   BASE.CSS — Reset, CSS Variables, Typography, Utilities
+   Wedd Wibes Studio
+   Edit this file to change: colors, fonts, spacing, animations
+   ============================================================ */
+
+/* ── Google Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400&display=swap');
+
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── CSS Variables (edit here to change the whole site theme) ── */
+:root {
+  /* Brand Colors */
+  --coral:        #E8705A;
+  --coral-light:  #F0957F;
+  --coral-pale:   #FAE8E3;
+  --coral-xpale:  #FDF4F1;
+  --cream:        #F7F3EF;
+  --warm-white:   #FEFCFA;
+
+  /* Text Colors */
+  --text-dark:    #2C2420;
+  --text-mid:     #6B5850;
+  --text-light:   #A8948C;
+
+  /* Borders */
+  --border:       rgba(232,112,90,0.15);
+  --border-mid:   rgba(44,36,32,0.1);
+
+  /* Typography */
+  --font-serif:   'Playfair Display', Georgia, serif;
+  --font-sans:    'DM Sans', sans-serif;
+
+  /* Layout */
+  --max-w:        1320px;
+
+  /* Animation */
+  --transition:   0.4s cubic-bezier(0.4,0,0.2,1);
+  --transition-fast: 0.2s ease;
+
+  /* Safe Areas (notch/home bar on phones) */
+  --safe-top:     env(safe-area-inset-top, 0px);
+  --safe-bottom:  env(safe-area-inset-bottom, 0px);
+}
+
+/* ── Base HTML/Body ── */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  background: var(--warm-white);
+  color: var(--text-dark);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ── Logo / icon images: never stretch, use natural size ── */
+.nav-logo img,
+.footer-brand-logo img,
+.fg-logo img,
+.story-nav-logo img,
+.fg-header-inner img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  object-fit: unset;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ── Container ── */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ── Label (small uppercase tag) ── */
+.label {
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--coral);
+  font-weight: 400;
+}
+
+/* ── Section Heading ── */
+.section-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  color: var(--text-dark);
+  margin-top: 0.8rem;
+  line-height: 1.2;
+}
+.section-heading em { color: var(--coral); font-style: italic; }
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+/* ── Reveal Animation ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.in       { opacity: 1; transform: translateY(0); }
+.reveal-d1       { transition-delay: 0.1s; }
+.reveal-d2       { transition-delay: 0.2s; }
+.reveal-d3       { transition-delay: 0.3s; }
+
+/* ── Image Placeholder (while real photos load) ── */
+.img-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-placeholder::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(232,112,90,0.08) 0%, transparent 60%);
+}
+
+/* ── Buttons ── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 2rem;
+  background: var(--coral);
+  color: white;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+  border-radius: 2px;
+  font-family: var(--font-sans);
+}
+.btn-primary:hover {
+  background: #d05c47;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(232,112,90,0.35);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-mid);
+  transition: color var(--transition);
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: var(--font-sans);
+}
+.btn-ghost:hover { color: var(--coral); }
+
+.btn-white {
+  padding: 0.85rem 2rem;
+  background: white;
+  color: var(--coral);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background var(--transition), transform var(--transition);
+  font-family: var(--font-sans);
+  font-weight: 400;
+}
+.btn-white:hover { background: var(--cream); transform: translateY(-2px); }
+
+.btn-outline-white {
+  padding: 0.85rem 2rem;
+  background: transparent;
+  color: white;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: 1.5px solid rgba(255,255,255,0.5);
+  cursor: pointer;
+  border-radius: 2px;
+  transition: border-color var(--transition), background var(--transition);
+  font-family: var(--font-sans);
+  font-weight: 300;
+}
+.btn-outline-white:hover { border-color: white; background: rgba(255,255,255,0.08); }
+
+/* ── Lazy loading placeholder color ── */
+img[loading="lazy"] { background: var(--coral-xpale); }
+
+/* ── Universal image frame: any img inside a sized container fills it perfectly ──
+   Just give the container a width + height (or aspect-ratio), drop in an <img>,
+   and it fills perfectly with no distortion. No extra CSS needed on the image. ── */
+.img-frame {
+  position: relative;
+  overflow: hidden;
+  background: var(--coral-xpale);
+}
+.img-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* ── Testimonial avatar: small circle, not a photo frame ── */
+.testimonial-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 50%;
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
