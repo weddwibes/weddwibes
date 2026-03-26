@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Wedd Wibes Studio — Premium Wedding & Portrait Photography. You Feel. I Focus. We Frame. Based in Rajkot, Gujarat.">
+<meta name="theme-color" content="#E8705A">
+<title>Wedd Wibes Studio — Wedding Photography</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="stylesheet" href="./css/base.css">
+<link rel="stylesheet" href="./css/nav.css">
+<link rel="stylesheet" href="./css/hero.css">
+<link rel="stylesheet" href="./css/sections.css">
+<link rel="stylesheet" href="./css/gallery.css">
+</head>
+
+<body>
+
+<!-- ════════════════════════════════════════════════
+     NAV
+════════════════════════════════════════════════ -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#">
+      <img src="photos/logo.png" alt="Wedd Wibes Studio" style="height:50px;width:auto;">
+      <div class="nav-logo-text">
+        <span class="nav-logo-name">Wedd Wibes Studio</span>
+        <span class="nav-logo-sub">Photography &amp; Film</span>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#portfolio">Gallery</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#testimonials">Stories</a></li>
+      <li><a href="#contact" class="nav-cta">Book Now</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="mobile-icon-nav" id="mobileIconNav">
+      <a href="#portfolio" class="mobile-icon-btn" aria-label="Gallery">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        <span>Gallery</span>
+      </a>
+      <a href="#about" class="mobile-icon-btn" aria-label="About">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        <span>About</span>
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=919484685191&text=Hi!%20I%20want%20to%20book%20Wedd%20Wibes%20Studio."
+         target="_blank" rel="noopener" class="mobile-icon-btn wp" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+        <span>WA</span>
+      </a>
+      <a href="#contact" class="mobile-book-btn">Book</a>
+    </div>
+  </div>
+</nav>
+
+<nav class="nav-drawer" id="navDrawer">
+  <ul>
+    <li><a href="#portfolio"    onclick="closeDrawer()">Gallery</a></li>
+    <li><a href="#services"     onclick="closeDrawer()">Services</a></li>
+    <li><a href="#about"        onclick="closeDrawer()">About</a></li>
+    <li><a href="#testimonials" onclick="closeDrawer()">Stories</a></li>
+    <li><a href="#contact"      onclick="closeDrawer()">Book Now</a></li>
+  </ul>
+</nav>
+
+<!-- ════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-left reveal">
+    <div class="hero-eyebrow">
+      <span class="hero-eyebrow-line"></span>
+      <span class="label">Wedding &amp; Portrait Photography</span>
+    </div>
+    <h1 class="hero-title">You Feel.<br>I Focus.<br><em>We Frame.</em></h1>
+    <p class="hero-tagline">Creating fiction out of reality — a chronology of your love story, told with cinematic grace.</p>
+    <div class="hero-actions">
+      <a href="#portfolio" class="btn-primary">
+        View our work
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+      <a href="#contact" class="btn-ghost">
+        Book a date
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </a>
+    </div>
+    <div class="hero-stats reveal reveal-d2">
+      <div><div class="hero-stat-num">300+</div><div class="hero-stat-label">Couples Served</div></div>
+      <div><div class="hero-stat-num">6+</div><div class="hero-stat-label">Years Experience</div></div>
+      <div><div class="hero-stat-num">100%</div><div class="hero-stat-label">Happy Clients</div></div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="deco-ring"></div>
+    <div class="hero-mosaic">
+      <div class="hero-mosaic-cell" >
+        <img src="photos/heli-shyam-1.jpg" alt="Heli & Shyam" loading="eager">
+        <div class="expand-hint"><svg viewBox="0 0 14 14"><path d="M2 2h4M2 2v4M12 2h-4M12 2v4M2 12h4M2 12v-4M12 12h-4M12 12v-4"/></svg></div>
+      </div>
+      <div class="hero-mosaic-cell" >
+        <img src="photos/riki-jay-1.jpg" alt="Riki & Jay" loading="eager">
+        <div class="expand-hint"><svg viewBox="0 0 14 14"><path d="M2 2h4M2 2v4M12 2h-4M12 2v4M2 12h4M2 12v-4M12 12h-4M12 12v-4"/></svg></div>
+      </div>
+      <div class="hero-mosaic-cell">
+        <img src="photos/vairag-krisha-1.jpg" alt="Vairag & Krisha" loading="eager">
+        <div class="expand-hint"><svg viewBox="0 0 14 14"><path d="M2 2h4M2 2v4M12 2h-4M12 2v4M2 12h4M2 12v-4M12 12h-4M12 12v-4"/></svg></div>
+      </div>
+    </div>
+    <div class="hero-badge">
+      <div class="hero-badge-dot"></div>
+      <div class="hero-badge-text"><strong>Booking 2025–26</strong>Limited dates available</div>
+    </div>
+    <div class="hero-slider-dots" id="sliderDots">
+      <div class="hero-slider-dot active"></div>
+      <div class="hero-slider-dot"></div>
+      <div class="hero-slider-dot"></div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-strip" aria-hidden="true">
+  <div class="marquee-inner">
+    <span class="marquee-item">Wedding Photography <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Pre-Wedding Sessions <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Engagement Portraits <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Maternity Stories <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Wedd Wibes Studio <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Rajkot, Gujarat &amp; Beyond <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Wedding Photography <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Pre-Wedding Sessions <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Engagement Portraits <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Maternity Stories <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Wedd Wibes Studio <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Rajkot, Gujarat &amp; Beyond <span class="marquee-dot"></span></span>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════
+     ABOUT
+════════════════════════════════════════════════ -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-image-wrap reveal">
+        <div class="about-img-main">
+          <img src="photos/about-main.jpg" alt="Dhaval - Wedd Wibes Studio" loading="lazy">
+        </div>
+        <div class="about-img-accent">
+          <img src="photos/about-accent.jpg" alt="Behind the scenes" loading="lazy">
+        </div>
+        <div class="about-quote-badge">
+          <span class="about-quote-num">300+</span>
+          <span class="about-quote-sub">Weddings</span>
+        </div>
+      </div>
+      <div class="about-content reveal reveal-d2">
+        <p class="label">Meet the Artist</p>
+        <h2 class="about-heading">I capture your story<br><em>the way you lived it.</em></h2>
+        <p class="about-body">"Hi, I'm Dhaval — a wedding photographer from Rajkot with 6+ years of experience and 300+ couples photographed across Gujarat."</p>
+        <p class="about-body">"I believe in capturing real moments — the happy tears, the nervous laughs, the quiet glances. I never interrupt, I just observe and frame."</p>
+        <p class="about-body">Based in Rajkot and available across Gujarat and beyond, we travel wherever your love story takes us.</p>
+        <p class="about-signature">Dhaval</p>
+        <p class="about-sig-title">Founder &amp; Lead Photographer, Wedd Wibes Studio</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SERVICES
+════════════════════════════════════════════════ -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="label">What we offer</p>
+      <h2 class="section-heading">Every moment, <em>beautifully preserved.</em></h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-num">01</div>
+        <div class="service-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M20 7H4a1 1 0 00-1 1v10a1 1 0 001 1h16a1 1 0 001-1V8a1 1 0 00-1-1zM7 5l1-2h8l1 2"/></svg></div>
+        <h3 class="service-name">Wedding Photography</h3>
+        <p class="service-desc">Full-day coverage of every ceremony, ritual, emotion, and candid moment — delivered with cinematic precision and heartfelt storytelling.</p>
+        <span class="service-link">Learn more →</span>
+      </div>
+      <div class="service-card reveal reveal-d1">
+        <div class="service-num">02</div>
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+        <h3 class="service-name">Pre-Wedding Sessions</h3>
+        <p class="service-desc">Relaxed, story-driven shoots that capture who you truly are together — at golden hour, in the city, or your most meaningful place.</p>
+        <span class="service-link">Learn more →</span>
+      </div>
+      <div class="service-card reveal reveal-d2">
+        <div class="service-num">03</div>
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+        <h3 class="service-name">Engagement &amp; Maternity</h3>
+        <p class="service-desc">Intimate portraits marking life's most tender and transformative milestones — with warmth, softness, and quiet elegance.</p>
+        <span class="service-link">Learn more →</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     PORTFOLIO
+════════════════════════════════════════════════ -->
+<section class="portfolio" id="portfolio">
+  <div class="container">
+    <div class="portfolio-header reveal">
+      <div>
+        <p class="label">Our Work</p>
+        <h2 class="portfolio-heading">Real <em>Love Stories</em></h2>
+      </div>
+      <div class="portfolio-filter">
+        <button class="filter-btn active" onclick="filterPortfolio('all', this)">All</button>
+        <button class="filter-btn" onclick="filterPortfolio('wedding', this)">Wedding</button>
+        <button class="filter-btn" onclick="filterPortfolio('prewedding', this)">Pre-Wedding</button>
+        <button class="filter-btn" onclick="filterPortfolio('engagement', this)">Engagement</button>
+      </div>
+    </div>
+
+    <div class="portfolio-grid reveal">
+
+      <div class="portfolio-item" data-cat="wedding" onclick="openGallery('heli-shyam')">
+        <img src="photos/wedding-1-main.jpg" alt="Heli & Shyam" loading="lazy">
+        <div class="photo-tint"></div><div class="photo-shimmer"></div>
+        <div class="portfolio-overlay">
+          <div><div class="portfolio-info-name">Heli &amp; Shyam</div><div class="portfolio-info-cat">Wedding — Rajkot</div></div>
+          <div class="portfolio-view-icon"><svg viewBox="0 0 15 15"><path d="M2 2h5M2 2v5M13 2h-5M13 2v5M2 13h5M2 13v-5M13 13h-5M13 13v-5"/></svg></div>
+        </div>
+        <div class="portfolio-count-badge">6 photos</div>
+      </div>
+
+      <div class="portfolio-item" data-cat="prewedding" onclick="openGallery('riki-jay')">
+        <img src="photos/prewedding-2-main.jpg" alt="Riki & Jay" loading="lazy">
+        <div class="photo-tint"></div><div class="photo-shimmer"></div>
+        <div class="portfolio-overlay">
+          <div><div class="portfolio-info-name">Nensi &amp; Aryan</div><div class="portfolio-info-cat">Pre-Wedding</div></div>
+          <div class="portfolio-view-icon"><svg viewBox="0 0 15 15"><path d="M2 2h5M2 2v5M13 2h-5M13 2v5M2 13h5M2 13v-5M13 13h-5M13 13v-5"/></svg></div>
+        </div>
+        <div class="portfolio-count-badge">4 photos</div>
+      </div>
+
+      <div class="portfolio-item" data-cat="wedding" onclick="openGallery('vairag-krisha')">
+        <img src="photos/wedding-2-main.jpg" alt="Vairag & Krisha" loading="lazy">
+        <div class="photo-tint"></div><div class="photo-shimmer"></div>
+        <div class="portfolio-overlay">
+          <div><div class="portfolio-info-name">Vairag &amp; Krisha</div><div class="portfolio-info-cat">Wedding</div></div>
+          <div class="portfolio-view-icon"><svg viewBox="0 0 15 15"><path d="M2 2h5M2 2v5M13 2h-5M13 2v5M2 13h5M2 13v-5M13 13h-5M13 13v-5"/></svg></div>
+        </div>
+        <div class="portfolio-count-badge">5 photos</div>
+      </div>
+
+      <div class="portfolio-item" data-cat="prewedding" onclick="openGallery('karan-bhoomi')">
+        <img src="photos/prewedding-1-main.jpg" alt="Karan & Bhoomi" loading="lazy">
+        <div class="photo-tint"></div><div class="photo-shimmer"></div>
+        <div class="portfolio-overlay">
+          <div><div class="portfolio-info-name">Divyaraj &amp; Aeshvari</div><div class="portfolio-info-cat">Pre-Wedding</div></div>
+          <div class="portfolio-view-icon"><svg viewBox="0 0 15 15"><path d="M2 2h5M2 2v5M13 2h-5M13 2v5M2 13h5M2 13v-5M13 13h-5M13 13v-5"/></svg></div>
+        </div>
+        <div class="portfolio-count-badge">4 photos</div>
+      </div>
+
+      <div class="portfolio-item" data-cat="engagement" onclick="openGallery('jahnvi-dev')">
+        <img loading="lazy" src="photos/jahnvi-dev-collage.jpg" alt="Jahnvi & Dev">
+        <div class="photo-tint"></div><div class="photo-shimmer"></div>
+        <div class="portfolio-overlay">
+          <div><div class="portfolio-info-name">Jahnvi &amp; Dev</div><div class="portfolio-info-cat">Engagement</div></div>
+          <div class="portfolio-view-icon"><svg viewBox="0 0 15 15"><path d="M2 2h5M2 2v5M13 2h-5M13 2v5M2 13h5M2 13v-5M13 13h-5M13 13v-5"/></svg></div>
+        </div>
+        <div class="portfolio-count-badge">4 photos</div>
+      </div>
+
+    </div>
+
+    <div class="portfolio-more reveal">
+      <button class="btn-primary" onclick="openFullGalleryPage()">
+        View Full Gallery
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="label">How it works</p>
+      <h2 class="section-heading">Your <em>journey with us</em></h2>
+    </div>
+    <div class="process-grid">
+      <div class="process-step reveal"><div class="process-num-wrap"><span class="process-num">01</span></div><div><h3 class="process-step-title">Connect</h3><p class="process-step-desc">Reach out via WhatsApp or our contact form. Tell us your date and vision — we'd love to hear your story.</p></div></div>
+      <div class="process-step reveal reveal-d1"><div class="process-num-wrap"><span class="process-num">02</span></div><div><h3 class="process-step-title">Consultation</h3><p class="process-step-desc">We meet (in person or virtually) to understand your preferences, locations, and the mood you want captured.</p></div></div>
+      <div class="process-step reveal reveal-d2"><div class="process-num-wrap"><span class="process-num">03</span></div><div><h3 class="process-step-title">We Shoot</h3><p class="process-step-desc">On the day, we blend in — capturing every real emotion, candid laugh, and precious ritual without interruption.</p></div></div>
+      <div class="process-step reveal reveal-d3"><div class="process-num-wrap"><span class="process-num">04</span></div><div><h3 class="process-step-title">Deliver</h3><p class="process-step-desc">You receive a beautifully edited gallery of high-resolution images — your story, forever preserved.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="label">Client Stories</p>
+      <h2 class="section-heading">Words from <em>our couples</em></h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"They didn't just photograph our wedding — they felt every moment and turned it into something we'll treasure forever. Every frame is a painting."</p>
+        <div class="testimonial-author"><div class="testimonial-avatar">H&S</div><div><div class="testimonial-name">Heli &amp; Shyam</div><div class="testimonial-event">Wedding, Rajkot 2025</div></div></div>
+      </div>
+      <div class="testimonial-card reveal reveal-d1">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Our pre-wedding shoot was so relaxed and fun. Dhaval has a gift for making you forget the camera is even there. The photos are breathtaking."</p>
+        <div class="testimonial-author"><div class="testimonial-avatar">R&J</div><div><div class="testimonial-name">Riki &amp; Jay</div><div class="testimonial-event">Pre-Wedding, 2023</div></div></div>
+      </div>
+      <div class="testimonial-card reveal reveal-d2">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Absolutely professional, artistic, and so warm. The photos from our engagement shoot made our families cry happy tears. Highly recommended!"</p>
+        <div class="testimonial-author"><div class="testimonial-avatar">V&K</div><div><div class="testimonial-name">Vairag &amp; Krisha</div><div class="testimonial-event">Engagement, 2024</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band" id="contact">
+  <div class="container">
+    <p class="label cta-band-label">Ready to Begin?</p>
+    <h2 class="cta-band-heading">Let's tell your<br>love story together.</h2>
+    <p class="cta-band-sub">Limited dates available for 2025 &amp; 2026. Reach out today to check availability for your special day.</p>
+    <div class="cta-band-btns">
+      <a href="https://api.whatsapp.com/send?phone=919904533525&text=Hi!%20I%20want%20to%20book%20Wedd%20Wibes%20Studio"
+         target="_blank" rel="noopener" class="btn-white">💬 WhatsApp Us</a>
+      <!-- ✅ Fixed: plain mailto — no Cloudflare obfuscation -->
+      <a href="https://mail.google.com/mail/?view=cm&to=weddwibes@gmail.com&su=Booking%20Enquiry%20-%20Wedd%20Wibes%20Studio" target="_blank" rel="noopener" class="btn-outline-white">✉ Send an Email</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-logo">
+          <a class="nav-logo" href="#"><img src="photos/logo.png" alt="Wedd Wibes Studio" style="height:42px;width:auto;"></a>
+          <div><div class="footer-brand-name">Wedd Wibes Studio</div><div class="footer-brand-sub">Photography &amp; Film</div></div>
+        </div>
+        <p class="footer-tagline">Creating fiction out of reality — one love story at a time. Based in Rajkot, serving all of Gujarat and beyond.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/wedd.wibes/" target="_blank" rel="noopener" title="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://maps.app.goo.gl/QzVJaTMw6amGXAoi6" target="_blank" rel="noopener" title="Location">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=919904533525" target="_blank" rel="noopener" title="WhatsApp">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Navigate</p>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#portfolio">Gallery</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Services</p>
+        <ul class="footer-links">
+          <li><a href="#services">Wedding Photography</a></li>
+          <li><a href="#services">Pre-Wedding Session</a></li>
+          <li><a href="#services">Engagement Portraits</a></li>
+          <li><a href="#services">Maternity Photography</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Get in Touch</p>
+        <div class="footer-contact-item">
+          <span class="footer-contact-label">Phone / WhatsApp</span>
+          <a href="tel:+919904533525" class="footer-contact-value">+91 99045 33525</a>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-label">Email</span>
+          <!-- ✅ Fixed: plain email -->
+          <a href="https://mail.google.com/mail/?view=cm&to=weddwibes@gmail.com&su=Booking%20Enquiry%20-%20Wedd%20Wibes%20Studio" target="_blank" rel="noopener" class="footer-contact-value">weddwibes@gmail.com</a>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-label">Location</span>
+          <a href="https://maps.app.goo.gl/QzVJaTMw6amGXAoi6" target="_blank" rel="noopener" class="footer-contact-value">Shanti Avenue, Satellite chowk, Rajkot - Morbi Hwy, Rajkot, Gujarat 360003</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2022 Wedd Wibes Studio. All rights reserved.</p>
+      <p class="footer-copy">Designed with love for love stories.</p>
+    </div>
+  </div>
+</footer>
+
+<button id="scrollTop" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 18 18"><path d="M9 14V4M4 8l5-5 5 5"/></svg>
+</button>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     LAYER 1 — FULL GALLERY PAGE  (all couples, slides up)
+════════════════════════════════════════════════════════════ -->
+<div id="fullGalleryPage" role="dialog" aria-modal="true" aria-label="Full portfolio">
+
+  <div class="fg-header">
+    <div class="fg-header-inner">
+      <button class="fg-back-btn" onclick="closeFullGalleryPage()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        <span>Back</span>
+      </button>
+      <div class="fg-logo">
+        <img src="photos/logo.png" alt="" style="height:32px;width:auto;">
+        <div>
+          <div class="fg-logo-name">Wedd Wibes Studio</div>
+          <div class="fg-logo-sub">Full Portfolio</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <a href="#" onclick="fgGoHome();return false;" class="fg-book-btn" style="background:rgba(44,36,32,0.12);color:var(--text-dark);">Home</a>
+        <a href="#" onclick="fgGoGallery();return false;" class="fg-book-btn" style="background:rgba(44,36,32,0.12);color:var(--text-dark);">Gallery</a>
+        <a href="#contact" class="fg-book-btn" onclick="closeFullGalleryPage()">Book Now</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="fg-hero">
+    <p class="label" style="color:rgba(255,255,255,0.65);margin-bottom:0.5rem;">Our Complete Work</p>
+    <h2 class="fg-hero-title">Every <em>Love Story</em><br>We've Told</h2>
+    <p class="fg-hero-sub">Browse all our weddings, pre-weddings &amp; engagements.</p>
+  </div>
+
+  <div class="fg-filter-bar">
+    <div class="fg-filter-inner">
+      <button class="fg-filter-btn active" onclick="filterFullGallery('all', this)">All Stories</button>
+      <button class="fg-filter-btn" onclick="filterFullGallery('wedding', this)">Weddings</button>
+      <button class="fg-filter-btn" onclick="filterFullGallery('prewedding', this)">Pre-Wedding</button>
+      <button class="fg-filter-btn" onclick="filterFullGallery('engagement', this)">Engagement</button>
+      <button class="fg-filter-btn" onclick="filterFullGallery('cocktailparty', this)">Cocktail-Party</button>
+    </div>
+  </div>
+
+  <div class="fg-body">
+    <div class="fg-grid" id="fgGrid">
+
+      <div class="fg-couple-card" data-fg-cat="wedding" onclick="openGalleryFromFull('heli-shyam')">
+        <div class="fg-card-img">
+          <img src="photos/wedding-1-main.jpg" alt="Heli & Shyam" loading="lazy">
+          <div class="fg-card-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg><span>View Story</span></div>
+          <div class="fg-card-badge">8 photos</div>
+          <div class="fg-card-cat-tag">Wedding</div>
+        </div>
+        <div class="fg-card-info"><div class="fg-card-name">Heli &amp; Shyam</div><div class="fg-card-meta">Wedding · Rajkot · 2025</div></div>
+      </div>
+
+      <div class="fg-couple-card" data-fg-cat="prewedding" onclick="openGalleryFromFull('riki-jay')">
+        <div class="fg-card-img">
+          <img src="photos/prewedding-2-main.jpg" alt="Riki & Jay" loading="lazy">
+          <div class="fg-card-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg><span>View Story</span></div>
+          <div class="fg-card-badge">8 photos</div>
+          <div class="fg-card-cat-tag">Pre-Wedding</div>
+        </div>
+        <div class="fg-card-info"><div class="fg-card-name">Nensi &amp; Aryan</div><div class="fg-card-meta">Pre-Wedding · 2023</div></div>
+      </div>
+
+      <div class="fg-couple-card" data-fg-cat="wedding" onclick="openGalleryFromFull('vairag-krisha')">
+        <div class="fg-card-img">
+          <img src="photos/wedding-2-main.jpg" alt="Vairag & Krisha" loading="lazy">
+          <div class="fg-card-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg><span>View Story</span></div>
+          <div class="fg-card-badge">8 photos</div>
+          <div class="fg-card-cat-tag">Wedding</div>
+        </div>
+        <div class="fg-card-info"><div class="fg-card-name">Vairag &amp; Krisha</div><div class="fg-card-meta">Wedding · 2024</div></div>
+      </div>
+
+      <div class="fg-couple-card" data-fg-cat="prewedding" onclick="openGalleryFromFull('karan-bhoomi')">
+        <div class="fg-card-img">
+          <img src="photos/prewedding-1-main.jpg" alt="Karan & Bhoomi" loading="lazy">
+          <div class="fg-card-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg><span>View Story</span></div>
+          <div class="fg-card-badge">8 photos</div>
+          <div class="fg-card-cat-tag">Pre-Wedding</div>
+        </div>
+        <div class="fg-card-info"><div class="fg-card-name">Divyaraj &amp; Aeshvari</div><div class="fg-card-meta">Pre-Wedding · 2024</div></div>
+      </div>
+
+      <div class="fg-couple-card" data-fg-cat="engagement" onclick="openGalleryFromFull('jahnvi-dev')">
+        <div class="fg-card-img">
+          <img src="photos/jahnvi-dev-collage.jpg" alt="Jahnvi & Dev" loading="lazy">
+          <div class="fg-card-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg><span>View Story</span></div>
+          <div class="fg-card-badge">8 photos</div>
+          <div class="fg-card-cat-tag">Engagement</div>
+        </div>
+        <div class="fg-card-info"><div class="fg-card-name">Jahnvi &amp; Dev</div><div class="fg-card-meta">Engagement · 2024</div></div>
+      </div>
+
+      <div class="fg-couple-card" data-fg-cat="cocktailparty" onclick="openGalleryFromFull('kaira-vansh')">
+        <div class="fg-card-img">
+          <img src="photos/cocktail-1-main.jpg" alt="Kaira & Vansh" loading="lazy">
+          <div class="fg-card-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg><span>View Story</span></div>
+          <div class="fg-card-badge">8 photos</div>
+          <div class="fg-card-cat-tag">Cocktail-Party</div>
+        </div>
+        <div class="fg-card-info"><div class="fg-card-name">Kaira &amp; Vansh</div><div class="fg-card-meta">Cocktail-Party · 2025</div></div>
+      </div>
+
+    </div>
+
+    <div class="fg-cta">
+      <p class="fg-cta-text">Ready to start your own story?</p>
+      <a href="https://api.whatsapp.com/send?phone=919904533525&text=Hi!%20I%20want%20to%20book%20Wedd%20Wibes%20Studio"
+         target="_blank" rel="noopener" class="btn-primary" onclick="closeFullGalleryPage()">
+        💬 Book on WhatsApp
+      </a>
+    </div>
+
+    <div class="fg-footer">
+      <span>© 2022 Wedd Wibes Studio</span>
+      <span>·</span>
+      <a href="https://mail.google.com/mail/?view=cm&to=weddwibes@gmail.com&su=Booking%20Enquiry%20-%20Wedd%20Wibes%20Studio" target="_blank" rel="noopener">weddwibes@gmail.com</a>
+      <span>·</span>
+      <a href="tel:+919904533525">+91 99045 33525</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     LAYER 2 — STORY PAGE  (single couple: hero + masonry)
+════════════════════════════════════════════════════════════ -->
+<div id="storyPage" role="dialog" aria-modal="true" aria-label="Couple story">
+
+  <!-- Sticky nav inside story page -->
+  <div class="story-nav">
+    <div class="story-nav-inner">
+      <button class="story-back-btn" onclick="closeStoryPage()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        <span>Back</span>
+      </button>
+      <div class="story-nav-logo">
+        <img src="photos/logo.png" alt="" style="height:30px;width:auto;">
+        <span class="story-nav-name">Wedd Wibes Studio</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <a href="#" onclick="storyGoHome();return false;" class="story-book-btn" style="background:rgba(44,36,32,0.12);color:var(--text-dark);">Home</a>
+        <a href="#" onclick="storyGoGallery();return false;" class="story-book-btn" style="background:rgba(44,36,32,0.12);color:var(--text-dark);">Gallery</a>
+        <a href="https://api.whatsapp.com/send?phone=919904533525&text=Hi!%20I%20want%20to%20book%20Wedd%20Wibes%20Studio"
+           target="_blank" rel="noopener" class="story-book-btn">Book Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scrollable body -->
+  <div class="story-body">
+
+    <!-- Big hero photo -->
+    <div class="story-hero" id="storyHero"></div>
+
+    <!-- Couple name + meta -->
+    <div class="story-meta-bar">
+      <div class="story-meta-inner">
+        <div>
+          <h1 class="story-couple-name" id="storyCouple"></h1>
+          <p class="story-couple-sub">
+            <span id="storyCat"></span>
+            <span class="story-dot">·</span>
+            <span id="storyDate"></span>
+          </p>
+        </div>
+        <div class="story-meta-credit">
+          <span class="story-credit-label">Photographed by</span>
+          <span class="story-credit-name">Wedd Wibes Studio</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Masonry photo grid -->
+    <div class="story-grid-wrap">
+      <div class="story-grid" id="storyGrid"></div>
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="story-footer-cta">
+      <p class="story-footer-text">Love this story? Let's write yours.</p>
+      <a href="https://api.whatsapp.com/send?phone=919904533525&text=Hi!%20I%20want%20to%20book%20Wedd%20Wibes%20Studio"
+         target="_blank" rel="noopener" class="btn-primary">💬 Book on WhatsApp</a>
+    </div>
+
+    <!-- Footer strip -->
+    <div class="story-footer-strip">
+      <span>© 2022 Wedd Wibes Studio</span>
+      <span>·</span>
+      <a href="https://mail.google.com/mail/?view=cm&to=weddwibes@gmail.com&su=Booking%20Enquiry%20-%20Wedd%20Wibes%20Studio" target="_blank" rel="noopener">weddwibes@gmail.com</a>
+      <span>·</span>
+      <a href="tel:+919904533525">+91 99045 33525</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     LAYER 3 — LIGHTBOX  (fullscreen single photo)
+════════════════════════════════════════════════════════════ -->
+<div id="lightboxPage" role="dialog" aria-modal="true" aria-label="Photo viewer">
+
+  <div class="lb-header">
+    <button class="lb-close-btn" onclick="closeLightbox()" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <span class="lb-counter" id="lbCounter">1/1</span>
+  </div>
+
+  <div class="lb-photo-area">
+    <div class="lb-strip" id="lbStrip"></div>
+    <button class="lb-arrow lb-arrow-prev" onclick="lbPrev()" aria-label="Previous">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button class="lb-arrow lb-arrow-next" onclick="lbNext()" aria-label="Next">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+    <div class="lb-tap-prev" onclick="lbPrev()"></div>
+    <div class="lb-tap-next" onclick="lbNext()"></div>
+  </div>
+
+  <div class="lb-thumb-strip" id="lbThumbs"></div>
+</div>
+
+
+<!-- Scripts — load gallery.js first (defines all functions), then main.js -->
+<script src="./js/gallery.js"></script>
+<script src="./js/main.js"></script>
+<script>
+  const scrollTopBtn = document.getElementById('scrollTop');
+  window.addEventListener('scroll', () => {
+    scrollTopBtn.classList.toggle('visible', window.scrollY > 300);
+  }, { passive: true });
+
+
+  function storyGoHome() {
+    document.getElementById('storyPage').classList.remove('open');
+    document.body.style.overflow = '';
+    setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 50);
+  }
+
+  function storyGoGallery() {
+    document.getElementById('storyPage').classList.remove('open');
+    document.body.style.overflow = '';
+    setTimeout(() => {
+      const el = document.getElementById('portfolio');
+      if (el) {
+        const offset = window.innerWidth <= 768 ? 56 : 80;
+        window.scrollTo({ top: el.offsetTop - offset, behavior: 'smooth' });
+      }
+    }, 50);
+  }
+
+  function fgGoHome() {
+    document.getElementById('fullGalleryPage').classList.remove('open');
+    document.body.style.overflow = '';
+    setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 50);
+  }
+
+  function fgGoGallery() {
+    document.getElementById('fullGalleryPage').classList.remove('open');
+    document.body.style.overflow = '';
+    setTimeout(() => {
+      const el = document.getElementById('portfolio');
+      if (el) {
+        const offset = window.innerWidth <= 768 ? 56 : 80;
+        window.scrollTo({ top: el.offsetTop - offset, behavior: 'smooth' });
+      }
+    }, 50);
+  }
+</script>
+
+</body>
+</html>
