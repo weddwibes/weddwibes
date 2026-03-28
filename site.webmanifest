@@ -1,0 +1,23 @@
+{
+  "name": "Wedd Wibes Studio",
+  "short_name": "Wedd Wibes",
+  "description": "Wedding Photography & Film — Rajkot, Gujarat",
+  "icons": [
+    {
+      "src": "/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#E8705A",
+  "background_color": "#FEFCFA",
+  "display": "standalone",
+  "start_url": "/"
+}
