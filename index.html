@@ -20,7 +20,7 @@
 <!-- OG Tags (WhatsApp, Facebook, LinkedIn preview) -->
 <meta property="og:title" content="Wedd Wibes Studio — Wedding Photography Rajkot">
 <meta property="og:description" content="Premium Wedding & Portrait Photography in Rajkot, Gujarat. 300+ Couples | 6+ Years Experience.">
-<meta property="og:image" content="https://www.weddwibes.com/photos/favicon.png">
+<meta property="og:image" content="https://www.weddwibes.com/photos/logo.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:url" content="https://www.weddwibes.com">
@@ -31,7 +31,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Wedd Wibes Studio — Wedding Photography Rajkot">
 <meta name="twitter:description" content="Premium Wedding & Portrait Photography in Rajkot, Gujarat.">
-<meta name="twitter:image" content="https://www.weddwibes.com/photos/favicon.png">
+<meta name="twitter:image" content="https://www.weddwibes.com/photos/logo.png">
 
 <!-- Schema.org (Google rich results) -->
 <script type="application/ld+json">
@@ -41,7 +41,7 @@
   "name": "Wedd Wibes Studio",
   "url": "https://www.weddwibes.com",
   "logo": "https://www.weddwibes.com/photos/logo.png",
-  "image": "https://www.weddwibes.com/photos/favicon.png",
+  "image": "https://www.weddwibes.com/photos/logo.png",
   "description": "Premium Wedding & Portrait Photography in Rajkot, Gujarat. 300+ Couples | 6+ Years Experience.",
   "telephone": "+919904533525",
   "email": "weddwibes@gmail.com",
@@ -735,4 +735,19 @@
   }
 
   function fgGoGallery() {
-    d
+  document.getElementById('fullGalleryPage').classList.remove('open');
+  document.body.style.overflow = '';
+  setTimeout(() => {
+    const el = document.getElementById('portfolio');
+    if (el) {
+      const offset = window.innerWidth <= 768 ? 56 : 80;
+      window.scrollTo({
+        top: el.offsetTop - offset,
+        behavior: 'smooth'
+      });
+    }
+  }, 50);
+}
+</script>
+</body>
+</html>
