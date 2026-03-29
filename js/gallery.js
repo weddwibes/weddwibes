@@ -14,7 +14,7 @@
 const GALLERY_DATA = {
 
   'heli-shyam': {
-    couple:   'Heli & Shyam',
+    couple:   'Maitri & Gaurav',
     category: 'Wedding · Rajkot',
     date:     '2025',
     hero:     'photos/wedding-1-main.jpg',
@@ -50,7 +50,7 @@ const GALLERY_DATA = {
   },
 
   'vairag-krisha': {
-    couple:   'Vairag & Krisha',
+    couple:   'Dhvani & Shridhar',
     category: 'Wedding',
     date:     '2024',
     hero:     'photos/wedding-2-main.jpg',
